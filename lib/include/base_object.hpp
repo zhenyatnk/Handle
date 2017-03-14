@@ -1,18 +1,14 @@
 #pragma once
 
-class Object1;
-
-enum class ETypeObject
-{
-    eObject1 = 1
-};
+template<class Type>
+class VisualTypeOnCompile;
 
 template <class Type>
 int GetEnumObject()
 {
+    VisualTypeOnCompile<Type> lVar;
     static_assert(sizeof(int) == 0, "Need specailization function GetEnumObject");
 }
-
 
 class BaseObject
 {
