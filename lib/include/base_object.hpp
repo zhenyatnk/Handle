@@ -1,5 +1,7 @@
 #pragma once
 
+#include <export.hpp>
+
 template<class Type>
 class VisualTypeOnCompile;
 

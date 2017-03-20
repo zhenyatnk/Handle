@@ -13,6 +13,7 @@ set(${_project_name}_${_component_name}_HEADERS
     include/export.hpp
     include/base_object.hpp
     include/handle.hpp
+    include/handle_object.hpp
     include/object_global_storage.hpp
     CACHE INTERNAL "${_project_name}_${_component_name} headers.")
 
@@ -21,7 +22,8 @@ set(${_project_name}_${_component_name}_VERSION
     CACHE INTERNAL "${_project_name}_${_component_name} versions.")
     
 set(${_project_name}_${_component_name}_SOURCES
-    src/fake.cpp
+    src/handle.cpp
+    src/handle_object.cpp
     CACHE INTERNAL "${_project_name}_${_component_name} sources")
 
 add_library(
@@ -52,6 +54,7 @@ target_link_libraries(
 #
 set(${_project_name}_${_component_name}_TESTS
    test/ogs_test.cpp
+   test/handle_test.cpp
     CACHE INTERNAL "${_project_name}_${_component_name} tests")
 
 #
